@@ -44,28 +44,6 @@ pis_size = 124
 # Functions to control variable material parameters
 [Functions]
   
-  [./pressure_constant]
-    type = ConstantFunction
-    value = 0.7e6 # 0.7 MPa
-  [../]
-  
-  [./cucrzr_rho_fn]
-    type = PiecewiseLinear
-    scale_factor = 1.0
-    axis = x
-    data_file = '../../MaterialData/Copper/density.csv'
-    format = columns
-  [../]
-
-  # Copper Youngs modulus
-  [./cucrzr_ym_fn]
-    type = PiecewiseLinear
-    scale_factor = 1.0
-    axis = x
-    data_file = '../../MaterialData/Copper/youngs_modulus.csv'
-    format = columns
-  [../]
-  
   #Copper Thermal conductivity
   [./cucrzr_tc_fn]
     type = PiecewiseLinear
@@ -92,33 +70,6 @@ pis_size = 124
     data_file = '../../MaterialData/Copper/specific_heat.csv'
     format = columns
   [../]
-
-  #Nickel youngs modulus
-  [./nickel_ym_fn]
-    type = PiecewiseLinear
-    scale_factor = 1.0
-    axis = x
-    data_file = '../../MaterialData/Nickel/youngs_modulus.csv'
-    format = columns
-  [../]
-  
-  #Nickel thermal conductivity
-  [./nickel_tc_fn]
-    type = PiecewiseLinear
-    scale_factor = 1.0
-    axis = x
-    data_file = '../../MaterialData/Nickel/thermal_conductivity.csv'
-    format = columns
-  [../]
-
-  #Nickel thermal expansion
-  [nickel_te_fn]
-    type = PiecewiseLinear
-    scale_factor = 1.0
-    axis = x
-    data_file = '../../MaterialData/Nickel/thermal_expansion.csv'
-    format = columns
-  []
 []
 
   
